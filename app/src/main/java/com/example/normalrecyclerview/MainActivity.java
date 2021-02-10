@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.normalrecyclerview.normalrecycler.NormalRecyclerView;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btn1;
@@ -20,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(this, )
+                Intent i = new Intent(MainActivity.this, NormalRecyclerView.class);
+                startActivity(i);
             }
         });
 
