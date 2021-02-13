@@ -7,11 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.normalrecyclerview.cardviewy.CardViewActivity;
 import com.example.normalrecyclerview.normalrecycler.NormalRecyclerView;
+import com.example.normalrecyclerview.singles.SingleSelectionRV;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btn1;
+    Button btn2;
+    Button btn3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, NormalRecyclerView.class);
+                startActivity(i);
+            }
+        });
+
+        btn2 = findViewById(R.id.button_cardview);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, CardViewActivity.class);
+                startActivity(i);
+            }
+        });
+
+        btn3 = findViewById(R.id.button_singlselection);
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, SingleSelectionRV.class);
                 startActivity(i);
             }
         });
