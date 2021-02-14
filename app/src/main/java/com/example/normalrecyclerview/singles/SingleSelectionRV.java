@@ -45,7 +45,7 @@ public class SingleSelectionRV extends AppCompatActivity {
                 if (adapter.getSelected() != null){
                     ShowToast(adapter.getSelected().getName());
                 }
-                else 
+                else
                     ShowToast("No Selection");
             }
         });
