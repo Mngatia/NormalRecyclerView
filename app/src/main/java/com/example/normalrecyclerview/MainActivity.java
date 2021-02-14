@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.normalrecyclerview.cardviewy.CardViewActivity;
+import com.example.normalrecyclerview.multiselection.MultipleSelectionActivity;
 import com.example.normalrecyclerview.normalrecycler.NormalRecyclerView;
 import com.example.normalrecyclerview.singles.SingleSelectionRV;
 
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn1;
     Button btn2;
     Button btn3;
+    Button btn4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, SingleSelectionRV.class);
+                startActivity(i);
+            }
+        });
+
+        btn4 = findViewById(R.id.button_multi_selection);
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, MultipleSelectionActivity.class);
                 startActivity(i);
             }
         });
