@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NormalRecyclerView">
-        <activity android:name=".multiselection.MultipleSelectionActivity"></activity>
+        <activity android:name=".swipe.SwipeSelectionActivity"></activity>
+        <activity android:name=".multiselection.MultipleSelectionActivity" />
         <activity android:name=".cardviewy.CardViewActivity" />
         <activity android:name=".singles.SingleSelectionRV" />
         <activity android:name=".normalrecycler.NormalRecyclerView" />
