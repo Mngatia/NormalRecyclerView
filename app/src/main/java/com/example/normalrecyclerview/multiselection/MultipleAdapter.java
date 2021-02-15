@@ -1,6 +1,7 @@
 package com.example.normalrecyclerview.multiselection;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -36,17 +37,20 @@ public class MultipleAdapter extends RecyclerView.Adapter<MultipleAdapter.MultiV
     @NonNull
     @Override
     public MultiViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View view = LayoutInflater.from(context).inflate(R.layout.item_employee,
+                parent, false);
+        return new MultiViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MultiViewHolder holder, int position) {
+        holder.bind(employees.get(position));
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return employees.size();
     }
 
     //2. ViewHolder class
